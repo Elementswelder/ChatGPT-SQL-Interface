@@ -1,5 +1,6 @@
 # This is a sample Python script.
 import os
+import sqlite3
 
 from openai import OpenAI
 
@@ -23,6 +24,28 @@ def start_program():
     )
 
     print(completion)
+
+
+def create_database():
+    conn = sqlite3.connect('database.db')
+    c = conn.cursor()
+    user_data = ("INSERT INTO users (UserID, Username, Name, AccountID, Password) VALUES (1, 'goldenboy', 'Billy Bob', "
+                 "1, 'password')")
+    c.execute(user_data)
+    user_data = ("INSERT INTO users (UserID, Username, Name, AccountID, Password) VALUES (1, 'silverboy', 'Jane Doe', "
+                 "1, 'password')")
+    c.execute(user_data)
+    user_data = ("INSERT INTO users (UserID, Username, Name, AccountID, Password) VALUES (1, 'bronzeboy', 'Mel Del', "
+                 "1, 'password')")
+    c.execute(user_data)
+
+
+
+    conn.commit()
+    conn.close()
+
+
+
 
 
 # Press the green button in the gutter to run the script.
