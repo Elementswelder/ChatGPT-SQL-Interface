@@ -6,7 +6,7 @@ A very basic script that connects to OpenAI's ChatGPT services and has it run qu
 - **pip** (Python package installer)
 
 ### Installing
-You will need your own OpenAI API Key/Secret
+You will need your own OpenAI API Key/Secret!!!
 
 1. **Clone the repository**
 2. **pip install -r requirements.txt**
